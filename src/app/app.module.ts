@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ErrorComponent } from './error/error.component';
 import { HeaderComponent } from './header/header.component';
 import { VehiclelistcomponentComponent } from './vehiclelistcomponent/vehiclelistcomponent.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { VehiclelistcomponentComponent } from './vehiclelistcomponent/vehiclelis
     VehiclelistcomponentComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
