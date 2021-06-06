@@ -1,4 +1,4 @@
-export class VehicleInfoModel{
+export class VehicleInfoModel{ // This model is used to Vehicle Name by its id
   Make_ID: number;
   Make_Name: string;
 

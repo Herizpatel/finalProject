@@ -7,13 +7,15 @@ import { ErrorComponent } from './error/error.component';
 import { HeaderComponent } from './header/header.component';
 import { VehiclelistcomponentComponent } from './vehiclelistcomponent/vehiclelistcomponent.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ModelNameComponent } from './model-name/model-name.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
     HeaderComponent,
-    VehiclelistcomponentComponent
+    VehiclelistcomponentComponent,
+    ModelNameComponent
   ],
   imports: [
     HttpClientModule,

@@ -9,7 +9,7 @@ import {map} from "rxjs/operators";
 export class VehicleService {
   api_URL = 'https://vpic.nhtsa.dot.gov/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: string) { }
 
   getVehicles(query: string): Observable<any>{
     const url = `${this.api_URL}/vehicles/getallmakes`;
@@ -18,7 +18,8 @@ export class VehicleService {
     return this.http.get<Array<{Make_ID: number, Make_Name: string}>>(url, {params})
       .pipe(
         map(results => {
-          const makes = [];
+          let makes: any[];
+          makes = [];
           results.forEach(result => {
             makes.push(new VehicleService(result.Make_Name));
           });
